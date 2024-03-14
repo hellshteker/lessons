@@ -1,0 +1,45 @@
+@import url(reset.css);
+
+[class *= "title"] {
+    color: red;
+}
+.header h1 {
+    color: darkorange;
+}
+ul.menu,
+.footer__list {
+    color: blue;
+}
+div > p {
+    color: rgb(92, 92, 92);
+}
+.block.text p {
+    color: rgb(102, 255, 0);
+}
+h2 ~ p {
+    color: rgb(33, 104, 0);
+}
+h3 {
+    color: blueviolet;
+}
+h3 + p {
+    color: rgba(0, 0, 0, 0.322);
+}
+.second .second__sub-title {
+    color: rgb(255, 0, 242);
+}
+.dish__second * {
+    color: indigo;
+}
+li.second__item .kulish {
+    color: aqua;
+}
+li.second__item h3 {
+    color: rgb(21, 255, 0);
+}
+#second-dish h2 {
+    color: rgb(218, 0, 109);
+}
+[href *= "youtube"] {
+    color: red;
+}
