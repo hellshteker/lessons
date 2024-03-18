@@ -1,0 +1,76 @@
+@font-face {
+    font-family: Asul;
+    src: url(../fonts/Asul-Regular.woff2) format(woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Asul;
+    src: url(../fonts/Asul-Bold.woff2) format(woff2);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ====================================================================== */
+
+@font-face {
+    font-family: M PLUS Code Latin;
+    src: url(../fonts/MPLUSCodeLatin-Thin.woff2) format(woff2);
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: M PLUS Code Latin;
+    src: url(../fonts/MPLUSCodeLatin-Regular.woff2) format(woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: M PLUS Code Latin;
+    src: url(../fonts/MPLUSCodeLatin-SemiBold.woff2) format(woff2);
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ====================================================================== */
+
+@font-face {
+    font-family: Shippori Mincho;
+    src: url(../fonts/ShipporiMincho-Regular.woff2) format(woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Shippori Mincho;
+    src: url(../fonts/ShipporiMincho-Medium.woff2) format(woff2);
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Shippori Mincho;
+    src: url(../fonts/ShipporiMincho-Bold.woff2) format(woff2);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ====================================================================== */
+
+@font-face {
+    font-family: Proxima Nova;
+    src: url(../fonts/proximanova_regular.woff2) format(woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
