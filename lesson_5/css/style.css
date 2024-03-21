@@ -1,0 +1,184 @@
+@import url(reset.css);
+@import url(fonts.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
+/* ========================================================= */
+
+
+.practice {
+    font-size: 0;
+    overflow: hidden;
+}
+.text-right {
+    text-align: right;
+}
+.block {
+    font-size: 26px;
+    margin: 30px 20px 40px;
+}
+.block-text {
+    background-color: #ff9203;
+    padding: 20px;
+}
+.inline-block {
+    margin: 0 -20px;
+    margin-bottom: 40px;
+}
+.inline-block-body {
+    font-size: 22px;
+    display: inline-block;
+    max-width: 50%;
+    padding: 0 20px;
+}
+.inline-block-text {
+    background-color: #d4d100;
+    padding: 20px 30px 20px 30px;
+    overflow: auto;
+}
+
+/* ========================================================= */
+
+.test {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #eeeeee;
+    margin-bottom: 50px;
+}
+.items {
+    margin: 0 -20px;
+}
+.item {
+    display: inline-block;
+    max-width: 33.33%;
+    font-size: 18px;
+    padding: 0 20px;
+}
+.item__title {
+    font-size: 36px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.item__image {
+    margin-bottom: 20px;
+}
+.item__image img {
+    max-width: 100%;
+}
+.item__text {
+    max-width: 350px;
+    height: 100px;
+    overflow: auto;
+}
+
+/* ========================================================= */
+
+.products {
+    font-family: Roboto, serif;
+    padding: 100px 15px;
+    margin-bottom: 50px;
+    background-color: #f8f8f8;
+}
+.products__container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.products__title {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.products__images {
+    margin: 0 -12px;
+    text-align: center;
+}
+.products__images img {
+    max-width: 200px;
+    padding: 0 12px 20px;
+}
+
+/* ========================================================= */
+
+.room-decor {
+    padding: 75px 0;
+    background-color: #f8f8f8;
+    margin-bottom: 50px;
+    font-family: "Proxima Nova",sans-serif;
+    color: #2b2929;
+    font-weight: 400;
+}
+.room-decor__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.room-decor__image {
+    margin-bottom: 40px;
+}
+.room-decor__image img {
+    max-width: 100%;
+}
+.room-decor__title {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+.room-decor__text {
+    font-size: 16px;
+    line-height: 1.87;
+    margin-bottom: 40px;
+}
+.room-decor__sub-text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4; /* 28/20 */
+}
+.room-decor__image {
+    text-align: center;
+}
+
+/* ========================================================= */
+
+.krovato {
+    background-color: #f8f8f8;
+    padding: 70px 15px;
+    text-align: center;
+}
+.krovato__container {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+.krovato__items {
+    margin: 0 -15px;
+}
+.krovato__item {
+    display: inline-block;
+    max-width: 300px;
+    vertical-align: top;
+    padding: 0 15px;
+}
+.krovato__image {
+    margin-bottom: 20px;
+}
+.krovato__image img {
+    max-width: 100%;
+}
+h2.krovato__title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    margin-bottom: 40px;
+}
+.krovato__title {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 131%;
+    margin-bottom: 20px;
+}
+.krovato__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 187%;
+}
