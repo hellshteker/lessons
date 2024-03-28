@@ -1,0 +1,412 @@
+@import url(../css/reset.css);
+@import url(../css/fonts.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo:regular,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Orbitron:regular&display=swap");
+
+/* ========================================================= */
+
+.practice {
+    font-size: 0;
+    overflow: hidden;
+    padding: 80px 0;
+}
+.block-1 {
+    font-size: 16px;
+}
+.block-1__items {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.block-1__item {
+    max-width: 20%;
+    display: inline-block;
+    margin-right: 30px;
+    padding: 15px;
+}
+.block-1__item:nth-child(1) {
+    background-color: rgb(14, 255, 255);
+}
+.block-1__item:nth-child(1):hover {
+    background-color: rgb(0, 197, 197);
+}
+.block-1__item:nth-child(1):active {
+    background-color: rgb(168, 197, 0);
+}
+
+.block-1__item:nth-child(2) {
+    background-color: rgb(9, 255, 0);
+}
+.block-1__items:hover .block-1__item:nth-child(2) {
+    background-color: rgb(5, 165, 0);
+}
+
+.link {
+    display: block;
+    font-size: 36px;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.link .block-1-1__item:nth-child(1) {
+    background-color: rgb(119, 82, 255);
+    display: inline-block;
+}
+.link .block-1-1__item:nth-child(2) {
+    background-color: rgb(212, 0, 255);
+}
+.bbb {
+    display: none;
+}
+.link:target .aaa{
+    display: none;
+}
+.link:target .bbb{
+    display: inline-block;
+}
+.bbb:target {
+    display: none;
+}
+
+/* ========================================================= */
+/* ------------------    GAME    -------------------------- */
+/* ========================================================= */
+
+.game {
+    font-size: 0;
+    background-color: #777777;
+    width: 1200px;
+    margin: 0 auto;
+    height: 1350px;
+    padding: 25px 25px;
+}
+.line-color {
+    background-color: #c300ff;
+    vertical-align: top;
+    /* border: 1px red solid; */
+}
+[class *="game__line-"] {
+    visibility: hidden;
+    /* font-size: 22px;
+    background-color: #c300ff; */
+}
+.game__line-1 {
+    visibility: visible;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0, 255, 0);
+}
+.game__line-2 {
+    width: 50px;
+    height: 50px;
+    width: 1000px;
+}
+.game__line-3 {
+    display: inline-block;
+    width: 950px;
+    height: 200px;
+}
+.game__line-4 {
+    display: inline-block;
+    width: 50px;
+    height: 200px;
+}
+.game__line-5 {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+}
+.game__line-6 {
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+}
+.game__line-7 {
+    display: inline-block;
+    width: 750px;
+    height: 30px;
+}
+.game__line-8 {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+}
+.game__line-9 {
+    display: inline-block;
+    width: 30px;
+    height: 250px;
+}
+.game__line-10 {
+    display: inline-block;
+    width: 870px;
+    height: 250px;
+}
+.game__line-11 {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+}
+.game__line-12 {
+    display: inline-block;
+    width: 350px;
+    height: 20px;
+}
+.game__line-13 {
+    display: inline-block;
+    width: 15px;
+    height: 50px;
+}
+.game__line-14 {
+    display: inline-block;
+    width: 600px;
+    height: 30px;
+}
+.game__line-15 {
+    display: inline-block;
+    width: 15px;
+    height: 30px;
+    background-color: red;
+}
+.game__line-16 {
+    width: 100%;
+    height: 60px;
+    background-color: red;
+}
+.game__line-17 {
+    width: 100%;
+    height: 600px;
+    background: url(../img/love1.png) 50% 100% / 30% no-repeat fixed;
+}
+
+.game__line-1:hover + .game__line-2,
+.game__line-2:hover {
+    visibility: visible;
+}
+.game__line-2:hover ~ .game__line-4,
+.game__line-4:hover {
+    visibility: visible;
+}
+.game__line-4:hover ~ .game__line-7,
+.game__line-7:hover {
+    visibility: visible;
+}
+.game__line-7:hover ~ .game__line-9,
+.game__line-9:hover {
+    visibility: visible;
+}
+.game__line-9:hover ~ .game__line-12,
+.game__line-12:hover {
+    visibility: visible;
+}
+.game__line-12:hover ~ .game__line-13,
+.game__line-13:hover {
+    visibility: visible;
+}
+.game__line-13:hover ~ .game__line-15,
+.game__line-15:hover {
+    visibility: visible;
+}
+.game__line-15:hover ~ .game__line-16,
+.game__line-16:hover {
+    visibility: visible;
+}
+.game__line-16:hover ~ .game__line-17,
+.game__line-17:hover {
+    visibility: visible;
+}
+
+/* ========================================================= */
+/* ===============    practice     ========================= */
+/* ========================================================= */
+
+.about {
+    font-family: "Exo", sans-serif;
+    font-size: 18px;
+    line-height: 2.22;
+    background-color: #000;
+    color: #fff;
+    padding: 120px 0;
+}
+.about__container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.about__content > *:not(:last-child) {
+    margin-bottom: 60px;
+}
+.body-about {
+    text-align: center;
+}
+.body-about > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+.body-about__title {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.17;
+    text-transform: uppercase;
+    padding: 0 50px;
+}
+.body-about__title p::before {
+    content: "";
+    width: 40px;
+}
+.body-about__title p::after {
+    content: "";
+    width: 40px;
+}
+.body-about__title::after {
+    content: "";
+    display: block;
+    background-image: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 50%, rgba(36,0,255,1) 100%);
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+}
+.body-about__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 2.22;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    max-width: 992px;
+    margin: 0 auto;
+}
+.items-about__item {
+    display: inline-block;
+
+}
+.items-about > *:not(:last-child) {
+    margin-right: 60px;
+}
+.items-about__item {
+    font-family: Orbitron, serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.25;
+    text-transform: capitalize;
+}
+.items-about__item::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 50%, rgba(36,0,255,1) 100%);
+    margin-left: 60px;
+}
+
+/* ========================================================= */
+
+.consult {
+    font-family: "Exo", sans-serif;
+    background-color: #000;
+    padding: 80px 0;
+}
+.consult__items {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.consult__item {
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    text-transform: lowercase;
+    color: #fff;
+    display: inline-block;
+}
+.consult__item:not(:last-child) {
+    margin-right: 80px;
+}
+.item-consult__phone,
+.item-consult__location {
+    text-transform: capitalize;
+}
+.item-consult__email {
+    text-transform: lowercase;
+}
+.consult__item::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+.item-consult__phone::before {
+    background: url(../img/about_Call.svg) left center / 100% no-repeat;
+}
+.item-consult__location::before {
+    background: url(../img/about_Location.svg) left center / 100% no-repeat;
+}
+.item-consult__email::before {
+    background: url(../img/about_Email.svg) left center / 100% no-repeat;
+}
+
+/* ========================================================= */
+
+.room-decor {
+    padding: 75px 0;
+    background-color: #f8f8f8;
+    font-family: "Proxima Nova",sans-serif;
+    color: #2b2929;
+    font-weight: 400;
+}
+.room-decor__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.room-decor__container > *:not(:last-child) {
+    margin-bottom: 40px;
+}
+.room-decor__image img {
+    max-width: 100%;
+}
+.room-decor__title {
+    text-align: left;
+
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+.room-decor__text {
+    font-size: 16px;
+    line-height: 1.87;
+}
+.room-decor__text p:not(:last-child) {
+    margin-bottom: 10px;
+}
+.room-decor__sub-text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4; /* 28/20 */
+}
+.room-decor__image {
+    text-align: center;
+}
+.room-decor__list {
+    line-height: 187%;
+}
+.room-decor__sub-text:not(:last-child) {
+    margin-bottom: 30px;
+}
+.room-decor__list li:not(:last-child) {
+    margin-bottom: 20px;
+}
+.room-decor__list p {
+    display: inline;
+}
+.room-decor__list li::before {
+    content: "";
+    width: 27px;
+    height: 27px;
+    background: url(../img/krovato_ok_2.svg) 0 0 / auto 100% no-repeat;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.room-decor__coment {
+    line-height: 187%;
+}
