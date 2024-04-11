@@ -1,0 +1,219 @@
+@import url(../css/reset.css);
+@import url(../css/fonts.css);
+
+/* ========================================================= */
+
+.wrapper {
+    overflow: clip;
+    min-height: 100%;
+}
+
+/* ============================================== */
+.card {
+    padding: 50px;
+    border-bottom: #2b2929 2px solid;
+}
+
+.some-item {
+    position: relative;
+    display: inline-block;
+    border-radius: 8px;
+    font-family: "Proxima Nova",sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    box-shadow: -3px 4px 15px 0 rgba(0,0,0,.06);
+}
+
+.some-item:hover {
+    box-shadow: -3px 4px 15px 0 rgba(0, 0, 0, 0.527);
+}
+
+.some-item__name {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.some-item__number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    color: #b1b1b1;
+}
+
+.some-item__arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+/* ============================================== */
+/* ============================================== */
+/* ============================================== */
+.catalog {
+    padding: 50px 0;
+}
+
+[class *= "__container"] {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.catalog__header {
+    background-color: #fff;
+    padding: 25px 15px;
+    position: relative;
+    z-index: 50;
+}
+
+.catalog__menu-header {
+    
+}
+
+.catalog__menu-header:target .catalog__link-button::before {
+    background: url(../img/catalog/close-catalog.svg) 0 0px / 100% no-repeat;
+}
+
+.catalog__link-button {
+    background-color: #ffbc57;
+    font-family: "Proxima Nova";
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 126%;
+    color: #fff;
+    padding: 11px 20px 11px 54px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.catalog__link-button::before {
+    content: "";
+    background: url(../img/catalog/menu.svg) 0 0px / 100% no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.catalog__menu {
+    font-size: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.catalog__menu-header:target .catalog__menu {
+    display: block;
+}
+
+.catalog__list {
+    color: #2b2929;
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+    padding: 8px 0px;
+    margin-top: 12px;
+    display: inline-block;
+}
+
+.catalog__list:hover {
+    border-radius: 8px 0 0 8px;
+}
+
+.catalog__list::before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: #ffbc57;
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    height: calc(100% - 16px);
+}
+
+.catalog__item {
+    display: block;
+    width: 308px;
+    border-radius: 8px 0 0 8px;
+}
+
+.catalog__item:hover {
+    background-color: #ffbc57;
+}
+
+.catalog__link {
+    font-family: "Proxima Nova";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    position: relative;
+    width: 100%;
+    padding: 10px 40px 10px 30px;
+}
+
+.catalog__link::after {
+    content: "";
+    background: url(../img/catalog/arrow.svg);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 30%;
+    right: 23px;
+}
+
+.catalog__item:hover .catalog__link::after {
+    background: url(../img/catalog/arrow_black.svg);
+}
+
+.catalog__link img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+    background-color: #fff;
+    padding: 20px 20px 20px 30px;
+    border-radius: 0 8px 8px 0;
+    min-width: 328px;
+    min-height: 100%;
+}
+
+.catalog__item:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.sub-menu__link {
+    font-family: "Proxima Nova";
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 2.11;
+}
+
+.sub-menu__link:hover {
+    text-decoration: underline;
+}
+
+.main {
+    padding: 30px 0;
+    backdrop-filter: blur(5px);
+    background: rgba(27, 26, 26, 0.8);
+}
+
+p {
+
+    font-size: 30px;
+}
