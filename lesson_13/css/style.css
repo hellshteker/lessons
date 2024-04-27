@@ -121,12 +121,12 @@ h2:not(:last-child) {
     column-gap: 10px;
 }
 .top-header__links a {
-    transition: scale 0.3s ease;
+    transition: transform 0.3s ease;
     display: flex;
     align-items: center;
 }
 .top-header__links a:hover {
-    scale: 1.1;
+    transform: scale(1.1);
 }
 .top-header__links a::before {
     content: "";
@@ -248,10 +248,10 @@ h2:not(:last-child) {
 }
 
 .info-main-header__call {
-    transition: scale 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .info-main-header__call:hover {
-    scale: 1.2;
+    transform: scale(1.2);
 }
 
 .info-main-header__working p {
@@ -477,10 +477,10 @@ h2:not(:last-child) {
     height: 100%;
     object-fit: cover;
     overflow: hidden;
-    transition: scale 0.5s ease;
+    transition: transform 0.5s ease;
 }
 .bestbuy__image img:hover {
-    scale: 1.1;
+    transform: scale(1.1);
 }
 .bestbuy__image:not(:last-child) {
     margin-bottom: 20px;
@@ -573,7 +573,7 @@ h2:not(:last-child) {
     transition: all 0.3s ease;
 }
 .bestbuy__icons-link a:hover {
-    scale: 1.2;
+    transform: scale(1.2);
 }
 
 /* ==================  page__sale  ================== */
@@ -598,10 +598,10 @@ h2:not(:last-child) {
     background-color: #fff;
     width: 50px;
     height: 50px;
-    transition: scale 0.2s ease;
+    transition: transform 0.2s ease;
 }
 .sale__link-arrow:hover {
-    scale: 1.2;
+    transform: scale(1.2);
 }
 .sale__link-arrow:nth-child(2) img {
     transform: rotate(180deg);
@@ -633,5 +633,5 @@ h2:not(:last-child) {
     box-shadow: 0 4px 4px 0 rgba(0,0,0,.25);
 }
 .sale__item img:hover {
-    scale: 1.05;
+    transform: scale(1.05);
 }
