@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>lesson 14</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="page">
+            <h1>lesson 14</h1>
+            <div class="page__homework homework">
+                <div class="homework__container">
+                    <h2>Оформлення замовлення</h2>
+                    <form action="#" method="get" name="form[]" class="homework__placing-order placing-order">
+                        <div class="placing-order__user-info user-info">
+                            <div class="user-info__title title">
+                                <img src="img/homework/info.svg" alt="image">
+                                <h3>Інформація про покупця</h3>
+                            </div>
+                            <div class="user-info__inputs">
+                                <div class="user-info__input">
+                                    <input type="text" name="form[]" tabindex="1" placeholder="Прізвище">
+                                </div>
+                                <div class="user-info__input">
+                                    <input type="tel" name="form[]" tabindex="4" placeholder="Контактний телефон">
+                                </div>
+                                <div class="user-info__input">
+                                    <input type="text" name="form[]" tabindex="2" placeholder="Ім’я">
+                                </div>
+                                <div class="user-info__input">
+                                    <input type="email" name="form[]" tabindex="5" placeholder="E-mail" required>
+                                </div>
+                                <div class="user-info__input">
+                                    <input type="text" name="form[]" tabindex="3" placeholder="По батькові">
+                                </div>
+                            </div>
+                            <label class="user-info__checkbox">
+                                <input type="checkbox" name="form[]">
+                                <span>Отримуватиме замовлення інша людина</span>
+                            </label>
+                        </div>
+                        <div class="placing-order__delivery delivery">
+                            <div class="delivery__title title">
+                                <img src="img/homework/delivery.svg" alt="image">
+                                <h3>Вибір способу доставки</h3>
+                            </div>
+                            <div class="delivery__radios">
+                                <label class="delivery__radio">
+                                    <input class="delivery__input" type="radio" name="delivery-choose">
+                                    <div class="delivery__text">
+                                        <span>Самовивіз із магазину</span>
+                                        <span>Бесплатно</span>
+                                    </div>
+                                </label>
+                                <label class="delivery__radio">
+                                    <input class="delivery__input" type="radio" name="delivery-choose">
+                                    <div class="delivery__text">
+                                        <span>Доставка Нова Пошта</span>
+                                        <span>≈ від 500 грн</span>
+                                    </div>
+                                </label>
+                                <label class="delivery__radio">
+                                    <input class="delivery__input" type="radio" name="delivery-choose">
+                                    <div class="delivery__text">
+                                        <span>Доставка кур'єром</span>
+                                        <span>≈ від 200 грн</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="delivery__locate locate-delivery">
+                                <div class="locate-delivery__image">
+                                    <img src="img/homework/locate.svg" alt="image">
+                                </div>
+                                <div class="locate-delivery__info">
+                                    <div class="locate-delivery__schedule">
+                                        <p>
+                                            Графік роботи: щодня з 9:00 до 18:00
+
+                                        </p>
+                                    </div>
+                                    <div class="locate-delivery__address">
+                                        <p>
+                                            м. Київ, пров. Ізяславський 52, пов. 2
+                                        </p>
+                                    </div>
+                                </div>
+                                <button type="button" class="locate-delivery__button">На мапі</button>
+                            </div>
+                        </div>
+                        <div class="placing-order__pays pays">
+                            <div class="pays__title title">
+                                <img src="img/homework/pay.svg" alt="image">
+                                <h3>Вибір способу оплати</h3>
+                            </div>
+                            <ul class="pays__items">
+                                <li>
+                                    <label class="pays__item">
+                                        <input class="pays__radio" type="radio" name="form[]">
+                                        <span class="pays__text">
+                                            Готівкою при отриманні (Післясплата)
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="pays__item">
+                                        <input class="pays__radio" type="radio" name="form[]">
+                                        <span class="pays__text">
+                                            Оплата карткою на сайті
+                                            <img src="img/homework/master-card-logo.svg" alt="image">
+                                            <img src="img/homework/visa-card-logo.svg" alt="image">
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="pays__item">
+                                        <input class="pays__radio" type="radio" name="form[]">
+                                        <span class="pays__text">
+                                            Privat Pay
+                                            <img src="img/homework/privat-pay-logo.svg" alt="image">
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="pays__item">
+                                        <input class="pays__radio" type="radio" name="form[]">
+                                        <span class="pays__text">
+                                            Кредит від Krovato
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="pays__item">
+                                        <input class="pays__radio" type="radio" name="form[]">
+                                        <span class="pays__text">
+                                            Оплата частинами ПриватБанк
+                                            <img src="img/homework/privaty-credit-logo.svg" alt="image">
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="pays__item">
+                                        <input class="pays__radio" type="radio" name="form[]">
+                                        <span class="pays__text">
+                                            Оплата частинами МоноБанк
+                                            <img src="img/homework/mono-bank-logo.svg" alt="image">
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="placing-order__comment comment">
+                            <div class="comment__title title">
+                                <img src="img/homework/comments.svg" alt="image">
+                                <h3>Коментар до замовлення</h3>
+                            </div>
+                            <textarea class="comment__textarea" name="form[]" placeholder="Ваш коментар"></textarea>
+                            <button class="placing-order__button" type="submit">
+                                ОФОРМИТИ ЗАМОВЛЕННЯ
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="page__practic">
+                <div class="practic__container">
+                    <form class="form" action="#" method="post" enctype="multipart/form-data">
+                        <div class="form__line">
+                            <label for="input-01">input-01 type="text"</label>
+                            <input name="form[]" value="input-01" class="form__input" id="input-01" type="text"
+                                autocomplete="off">
+                        </div>
+                        <div class="form__line">
+                            <label for="input-02">input-02 type="text"</label>
+                            <input name="form[]" placeholder="input-02" class="form__input" id="input-02" type="text">
+                        </div>
+                        <div class="form__line">
+                            <label for="input-03">input-03 type="text"</label>
+                            <input disabled name="form[]" class="form__input" id="input-03" type="text">
+                        </div>
+                        <div class="form__line">
+                            <label for="input-04">input-04 type="email" //hidden</label>
+                            <input hidden name="form[]" class="form__input" id="input-04" type="email">
+                        </div>
+                        <div class="form__line">
+                            <label for="input-05">input-05 type="email"</label>
+                            <input name="form[]" class="form__input" id="input-05" type="email"
+                                placeholder="enter your email..." required>
+                        </div>
+                        <div class="form__line">
+                            <label for="input-06">input-06 type="tel</label>
+                            <input name="form[]" class="form__input" id="input-06" type="tel"
+                                placeholder="enter your phone number..." required>
+                        </div>
+                        <div class="form__line">
+                            <label for="input-07">input-07 type="password"</label>
+                            <input name="form[]" class="form__input" id="input-07" type="password"
+                                placeholder="enter your password...">
+                        </div>
+                        <div class="form__line">
+                            <label for="input-08">input-08 type="number"</label>
+                            <input name="form[]" class="form__input" id="input-08" type="number"
+                                placeholder="enter number" required>
+                        </div>
+                        <div class="form__line">
+                            <label for="input-09">input-09 type="color"</label>
+                            <input name="form[]" class="form__input form__input--color" id="input-09" type="color"
+                                value="#67339b">
+                        </div>
+                        <div class="form__line">
+                            <label for="input-10">input-10 type="search"</label>
+                            <input name="form[]" class="form__input" id="input-10" type="search" required>
+                        </div>
+                        <div class="form__line">
+                            <label for="input-11">input-11 type="date"</label>
+                            <input name="form[]" class="form__input" id="input-11" type="date">
+                        </div>
+                        <div class="form__line">
+                            <label for="input-12">input-12 type="range"</label>
+                            <input name="form[]" class="form__input form__input--range" id="input-12" type="range"
+                                value="40">
+                        </div>
+                        <div class="form__line">
+                            <label for="input-13">input-13 type="file"</label>
+                            <input name="form[]" class="form__input" id="input-13" type="file" multiple
+                                accept=".jpg, .png">
+                        </div>
+                        <textarea class="form__textarea" name="form[]" id="text"></textarea>
+                        <div class="form__checkbox checkbox--p">
+                            <input type="checkbox" class="checkbox__input--p" id="check" name="form[]" checked
+                                value="yes">
+                            <label for="check" class="checkbox__label--p">car?</label>
+                        </div>
+                        <div class="form__checkbox checkbox--p">
+                            <input type="checkbox" class="checkbox__input--p" id="check-2" name="check-2" value="yes">
+                            <label for="check-2" class="checkbox__label--p">house?</label>
+                        </div>
+                        <fieldset class="form__group">
+                            <legend class="form__title">favorite pet</legend>
+                            <div class="form__radio">
+                                <input type="radio" id="pet-01" name="pet" value="form[]" checked>
+                                <label for="pet-01">Cat</label>
+                            </div>
+                            <div class="form__radio">
+                                <input type="radio" id="pet-02" name="pet" value="form[]">
+                                <label for="pet-02">Dog</label>
+                            </div>
+                        </fieldset>
+                        <select name="form[]" multiple>
+                            <option value="red">red</option>
+                            <option value="green">green</option>
+                            <option value="blue">blue</option>
+                            <option value="yellow">yellow</option>
+                        </select>
+                        <div class="form__line">
+                            <button type="button">button</button>
+                            <button type="reset">reset</button>
+                            <button type="submit">submit</button>
+                        </div>
+                    </form>
+                    <form action="#" class="search">
+                        <input type="search" placeholder="Пошук товарів" class="search__input">
+                        <button type="submit" class="search__button"></button>
+                    </form>
+                    <form action="#" class="choose">
+                        <label class="choose__checkbox checkbox">
+                            <input type="checkbox" class="checkbox__input">
+                            <span class="checkbox__text">Обери мене</span>
+                        </label>
+                        <label class="choose__checkbox checkbox">
+                            <input type="checkbox" class="checkbox__input">
+                            <span class="checkbox__text">І мене</span>
+                        </label>
+                        <label class="choose__radio radio">
+                            <input type="radio" name="some-name" class="radio__input">
+                            <span class="radio__text">Обери мене</span>
+                        </label>
+                        <label class="choose__radio radio">
+                            <input type="radio" name="some-name" class="radio__input">
+                            <span class="radio__text">Або мене</span>
+                        </label>
+                        <button>Відправити</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
