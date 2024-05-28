@@ -823,6 +823,7 @@ body {
   display: flex;
   gap: 40px;
   overflow: auto hidden;
+  padding-bottom: 20px;
 }
 @media (max-width: 767.98px) {
   .best__items {
@@ -911,7 +912,7 @@ body {
     height: 70px;
   }
 }
-.best__button div {
+.best__button span {
   display: none;
 }
 @media (min-width: 768px) {
@@ -926,7 +927,7 @@ body {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  .best__button div {
+  .best__button span {
     display: block;
     padding-top: 0;
     font-weight: 700;
@@ -938,7 +939,7 @@ body {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  .best__button:hover div {
+  .best__button:hover span {
     padding-top: 10px;
     font-size: 40px;
   }
