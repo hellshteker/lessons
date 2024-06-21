@@ -609,7 +609,7 @@ body {
             object-position: top;
             aspect-ratio: 1 / 1;
             transition: all 0.3s ease-out;
-            @media not all and (hover: none) {
+            @media (any-hover: hover) {
                 &:hover {
                     transform: scale(1.1);
                 }
@@ -617,7 +617,7 @@ body {
 
         }
         
-        @media not all and (hover: none) {
+        @media (any-hover: hover) {
             transition: opacity 0.3s ease;
             &:hover .explore__footer {
                 opacity: 1;
@@ -648,7 +648,7 @@ body {
         color: #ffffff;
 
         transition: opacity 0.5s ease;
-        @media not all and (hover: none) {
+        @media (any-hover: hover) {
             opacity: 0;
         }
         @media (max-width: 767.98px) {
@@ -900,7 +900,7 @@ body {
         }
         & > * {
             transition: all 0.3s ease;
-            @media not all and (hover: none) {
+            @media (any-hover: hover) {
                 &:hover svg .item-newsletter__svg{
                     fill: #ff6f61;
                 }
@@ -941,7 +941,7 @@ body {
         svg path {
             transition: all 0.2s ease;
         }
-        @media not all and (hover: none) {
+        @media (any-hover: hover) {
             &:hover svg .item-newsletter__svg{
                 fill: #ff6f61;
             }
