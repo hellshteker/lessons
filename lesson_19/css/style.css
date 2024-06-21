@@ -908,7 +908,7 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
-@media not all and (hover: none) {
+@media (any-hover: hover) {
   .item-newsletter__body:hover .item-newsletter__menu {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
@@ -969,7 +969,7 @@ body {
       -ms-transform: translate(0, 105%);
           transform: translate(0, 105%);
 }
-@media (hover: none) {
+@media (any-hover: none) {
   .item-newsletter__menu {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
