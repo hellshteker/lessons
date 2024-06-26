@@ -880,9 +880,14 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 .item-newsletter {
-  /* display: flex;
-  flex-direction: column;
-  height: 100%; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 .item-newsletter > * {
   margin-bottom: 16px;
@@ -1026,6 +1031,7 @@ body {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   padding: 0 10px;
+  font-size: 16px;
   font-weight: 600;
 }
 .item-newsletter__bottom {
@@ -1305,6 +1311,15 @@ body {
           flex: 0 0 312px;
   padding-bottom: 10px;
 }
+.item-best {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .item-best > * {
   margin-bottom: 16px;
 }
@@ -1447,6 +1462,7 @@ body {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   padding: 0 10px;
+  font-size: 16px;
   font-weight: 600;
 }
 .item-best__bottom {
@@ -1547,12 +1563,31 @@ body {
 }
 .follow__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          @media (max-width: 450px) {
+              grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+              gap: 10px;
+              margin: 0 -10px;
+          } */
+  grid-template-columns: repeat(6, auto);
 }
-@media (max-width: 450px) {
+@media (max-width: 1240px) {
   .follow__items {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media (max-width: 635px) {
+  .follow__items {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (max-width: 425px) {
+  .follow__items {
+    grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: 0 -10px;
   }
@@ -1862,4 +1897,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 4px;
+}
+@media (any-hover: hover) {
+  .bot-footer__scroll-top:hover {
+    text-decoration: underline;
+  }
 }
