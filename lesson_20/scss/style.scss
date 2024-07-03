@@ -1,0 +1,489 @@
+@use "sass:math";
+
+/* RESET STYLES */
+@import "_reset.scss";
+/* ===== FONTS ===== */
+@import "_fonts.scss";
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap");
+
+/* ============================================= */
+/* ============================================= */
+/* ============================================= */
+
+//Fonts
+$font-family: "Rubik", sans-serif;
+$second-family: "Raleway", sans-serif;
+
+//Percent
+@function percent($px, $from: 100) {
+	$result: math.div($px, $from) * 100%;
+	@return $result;
+}
+//REM
+@function toRem($px, $current: 16) {
+	$result: math.div($px, $current) + rem;
+	@return $result;
+}
+//EM
+@function toEm($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+
+/* ============================================= */
+
+body {
+    font-family: $font-family;
+    font-weight: 700;
+    color: #000;
+}
+.menu-open body {
+    overflow: hidden;
+}
+.wrapper {
+    overflow: clip;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex: 1 1 auto;
+}
+
+[class *= "__container"] {
+    max-width: toRem(1090);
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+    margin: 0 auto;
+}
+//!=====================================================
+
+.button {
+    font-family: $second-family;
+    font-size: toRem(10);
+    font-weight: 800;
+    color: #fcfdfe;
+    letter-spacing: 0.14em;
+
+    min-height: toRem(40);
+    padding: toRem(5) toRem(30);
+    border-radius: toRem(5);
+
+    transition: background 0.3s ease;
+
+    @media (max-width: toEm(479.98)) {
+        padding: toRem(5) toRem(20);
+        min-height: toRem(35);
+    }
+}
+.button--blue {
+    background: #4285f4;
+    @media (any-hover: hover) {
+        &:hover {
+            background: #0062ff;
+        }
+    }
+}
+.button--red {
+    background: #ec5863;
+    @media (any-hover: hover) {
+        &:hover {
+            background: #ff0011;
+        }
+    }
+}
+
+.content__title {
+    &:not(:first-child) {
+        margin-top: toRem(70);
+    }
+    margin-bottom: toRem(20);
+
+    font-family: $second-family;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: toRem(36);
+    text-align: center;
+}
+.content p {
+    font-family: $second-family;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: toRem(24);
+    color: #b6b6b6;
+    text-align: center;
+}
+
+//!===========   header   ==========================================
+
+
+.header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+
+    // .header__container
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: toRem(114);
+        gap: toRem(30);
+        @media (max-width: toEm(991.98)) {
+            min-height: toRem(74);
+        }
+        @media (max-width: toEm(479.98)) {
+            gap: toRem(15);
+        }
+    }
+
+    // .header__logo
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: toRem(5);
+        span {
+            color: #ec5863;
+        }
+
+        position: relative;
+        z-index: 2;
+
+        transition: transform 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        @media (max-width: toEm(479.98)) {
+            img {
+                display: none;
+            }
+        }
+    }
+
+    // .header__menu
+
+    &__menu {
+
+    }
+}
+.menu {
+
+    display: flex;
+
+    // .menu__body
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: toRem(160);
+        @media (max-width: toEm(991.98)) {
+            gap: toRem(120);
+        }
+        @media (max-width: toEm(850)) {
+            gap: toRem(80);
+        }
+        @media (max-width: toEm(767.98)) {
+            gap: toRem(20);
+        }
+    }
+
+    // .menu__list
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: toRem(40);
+        row-gap: toRem(10);
+        background-color: #ffffff;
+        @media (max-width: toEm(767.98)) {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background-color: #ffffff;
+            padding: toRem(150) toRem(20) toRem(50) toRem(20);
+
+            flex-direction: column;
+            text-align: center;
+            flex-wrap: nowrap;
+            row-gap: toRem(50);
+            overflow: auto;
+
+            transition: left 0.3s ease;
+            .menu-open & {
+                left: 0;
+            }
+        }
+    }
+
+    // .menu__item
+
+    &__item {
+    }
+
+    // .menu__link
+
+    &__link {
+        font-family: $second-family;
+        font-size: toRem(10);
+        white-space: nowrap;
+        letter-spacing: 0.14em;
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        @media (max-width: toEm(767.98)) {
+            font-size: toRem(28);
+        }
+    }
+
+    // .menu__button
+
+    &__button {
+        position: relative;
+        z-index: 2;
+    }
+
+    // .menu__burger
+
+    &__burger {
+        display: none;
+
+        @media (max-width: toEm(767.98)) {
+            display: block;
+            position: relative;
+            z-index: 2;
+            width: toRem(30);
+            height: toRem(18);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: toRem(2);
+                background-color: #000;
+                transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: toRem(2);
+                background-color: #000;
+                transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            .menu-open &::before {
+                top: calc(50% - toRem(1));
+                transform: rotate(-45deg);
+            }
+            .menu-open &::after {
+                top: calc(50% - toRem(1));
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    // .menu__icon-burger
+
+    &__icon-burger {
+        position: absolute;
+        height: toRem(2);
+        width: 100%;
+        top: calc(50% - toRem(1));
+        left: 0;
+        background-color: #000;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        .menu-open & {
+            left: 50%;
+            width: 0;
+        }
+    }
+}
+
+
+//!===========   main   ==========================================
+
+
+.page {
+
+    // .page__main
+
+    &__main {
+    }
+}
+.main {
+
+    @media (min-width: toEm(768)) {
+        padding-bottom: toRem(50);
+    }
+
+    // .main__container
+    
+    &__container {
+        padding: toRem(144) 0 toRem(48) 0;
+
+        @media (min-width: toEm(768)) {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 75.8%;
+                width: 100vw;
+                height: 100%;
+                background: #ec5863;
+                border-radius: toRem(30) 0 0 toRem(30);
+            }
+        }
+    }
+
+    // .main__block
+
+    &__block {
+        position: relative;
+        z-index: 2;
+
+        padding: 0 toRem(10) 0 toRem(18);
+    }
+
+    // .main__content
+
+    &__content {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: toRem(60);
+        }
+        @media (max-width: toEm(767.98)) {
+            flex-direction: column;
+            row-gap: toRem(40);
+        }
+    }
+
+    // .main__body
+
+    &__body {
+        flex: 0 0 47%;
+        & > * {
+            margin-bottom: toRem(12);
+        }
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+        padding-right: toRem(10);
+    }
+
+    // .main__title
+
+    &__title {
+        font-weight: 700;
+        font-size: toRem(44);
+        line-height: 1.26;
+        span {
+            color: #4285f4;
+        }
+        @media (max-width: toEm(479.98)) {
+            font-size: toRem(30);
+        }
+    }
+
+    // .main__text
+
+    &__text {
+        font-weight: 400;
+        font-size: toRem(12);
+        line-height: 1.38;
+        letter-spacing: 0.08em;
+        color: #616161;
+        margin-bottom: toRem(24);
+        max-width: toRem(375);
+    }
+
+    // .main__button
+
+    &__button {
+    }
+
+    // .main__image
+
+    &__image {
+        flex: 0 0 53%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 547 / 394;
+        }
+    }
+
+    // .main__video-link
+
+    &__video-link {
+    }
+}
+
+.video-link {
+
+    display: flex;
+    align-items: center;
+    gap: toRem(12);
+
+    // .video-link__image
+
+    &__image {
+        flex: 0 0 toRem(44);
+        svg, img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 44 / 44;
+        }
+    }
+
+    // .video-link__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(5);
+
+        font-weight: 400;
+        line-height: 1.26;
+    }
+
+    // .video-link__title
+
+    &__title {
+        
+        font-size: toRem(13);
+        letter-spacing: 0.08em;
+        color: #b0b0b0;
+    }
+
+    // .video-link__text
+
+    &__text {
+        font-size: toRem(9);
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+    }
+}
