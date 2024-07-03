@@ -60,6 +60,9 @@ body {
 //!=====================================================
 
 .button {
+    display: inline-flex;
+    align-items: center;
+
     font-family: $second-family;
     font-size: toRem(10);
     font-weight: 800;
@@ -126,6 +129,11 @@ body {
     width: 100%;
     z-index: 50;
 
+    @media (max-width: toEm(767.98)) {
+        background-color: #ffffff;
+        border-bottom: 1px #c4c4c4 solid;
+    }
+
     // .header__container
 
     &__container {
@@ -135,7 +143,10 @@ body {
         min-height: toRem(114);
         gap: toRem(30);
         @media (max-width: toEm(991.98)) {
-            min-height: toRem(74);
+            min-height: toRem(80);
+        }
+        @media (max-width: toEm(767.98)) {
+            min-height: toRem(68);
         }
         @media (max-width: toEm(479.98)) {
             gap: toRem(15);
@@ -209,10 +220,10 @@ body {
             position: fixed;
             width: 100%;
             height: 100%;
-            top: 0;
+            top: toRem(69);
             left: -100%;
             background-color: #ffffff;
-            padding: toRem(150) toRem(20) toRem(50) toRem(20);
+            padding: toRem(70) toRem(15) toRem(40) toRem(15);
 
             flex-direction: column;
             text-align: center;
