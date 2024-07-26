@@ -1,0 +1,117 @@
+@use "sass:math";
+/* RESET STYLES */
+@import "_reset.scss";
+/* ===== FONTS ===== */
+@import "_fonts.scss";
+
+/* ============================================= */
+
+//Percent
+@function percent($px, $from: 100) {
+	$result: math.div($px, $from) * 100%;
+	@return $result;
+}
+//REM
+@function toRem($px, $current: 16) {
+	$result: math.div($px, $current) + rem;
+	@return $result;
+}
+//EM
+@function toEm($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+
+/* ============================================= */
+/* ============================================= */
+
+
+body {
+    font-family: sans-serif;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    line-height: 1.4;
+}
+.wrapper {
+    overflow: clip;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+
+[class *= "__container"] {
+    max-width: toRem(1030);
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+    margin: 0 auto;
+}
+
+//!==========================================================
+
+.page {
+
+    // .page__homework
+
+    &__homework {
+    }
+}
+.homework {
+
+    padding: toRem(50) toRem(0);
+
+    // .homework__container
+
+    &__container {
+    }
+
+    // .homework__title
+
+    &__title {
+        font-size: toRem(40);
+        font-weight: 700;
+        text-align: center;
+        &:not(:last-child) {
+            margin-bottom: toRem(50);
+        }
+    }
+
+    // .homework__items
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & > *:not(:last-child) {
+            margin-bottom: toRem(50);
+        }
+    }
+
+    // .homework__item
+
+    &__item {
+        text-align: center;
+        & > *:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+    }
+
+    // .homework__question
+
+    &__question {
+        span {
+            font-size: toRem(22);
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fffc62;
+        }
+    }
+
+    // .homework__answer
+
+    &__answer {
+        color: #7ee5ff;
+    }
+}
