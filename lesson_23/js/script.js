@@ -11,16 +11,16 @@
     
     //const bodyElement = document.body;
 
-    function addUlList(liValue = 5) {
+    function addUlList(place, liValue = 5) {
         let template = `<ul>`;
         for(let i = 1; i <= liValue; i++) {
             template += `<li>Пункт №${i}</li>`
         }
         template += `</ul>`;
 
-        bodyElement.insertAdjacentHTML("afterbegin", template);
+        place.insertAdjacentHTML("afterbegin", template);
     }
-    addUlList(5);
+    addUlList(bodyElement, 5);
 
     /*     Задача №3
     Додати до елементу <body> класс loaded.
