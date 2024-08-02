@@ -1,0 +1,155 @@
+@use "sass:math";
+/* RESET STYLES */
+@import "_reset.scss";
+/* ===== FONTS ===== */
+@import "_fonts.scss";
+
+/* ============================================= */
+
+//Percent
+@function percent($px, $from: 100) {
+	$result: math.div($px, $from) * 100%;
+	@return $result;
+}
+//REM
+@function toRem($px, $current: 16) {
+	$result: math.div($px, $current) + rem;
+	@return $result;
+}
+//EM
+@function toEm($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+
+/* ============================================= */
+/* ============================================= */
+
+
+body {
+    font-family: sans-serif;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    line-height: 1.4;
+    //#opacity: 0;
+    opacity: 1;
+    transition: opacity 2s;
+}
+.wrapper {
+    overflow: clip;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+
+[class *= "__container"] {
+    max-width: toRem(1030);
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+    margin: 0 auto;
+}
+
+//!==========================================================
+
+header {
+    background-color: #10737a;
+}
+footer {
+    background-color: #10737a;
+    transition: background-color 0.3s;
+}
+header, footer {
+    height: toRem(150);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: toRem(44);
+}
+
+//!==========================================================
+
+.practic {
+
+    // .practic__container
+
+    &__container {
+    }
+
+    // .practic__title
+
+    &__title {
+        font-size: toRem(40);
+        font-weight: 700;
+        text-align: center;
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+
+    // .practic__items
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(30);
+    }
+
+    // .practic__block
+
+    &__block {
+    }
+
+    // .practic__label
+
+    &__label {
+        font-size: toRem(35);
+        font-weight: 500;
+        text-align: center;
+        &:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+        color: #ff73009c;
+    }
+}
+.dz1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button {
+        margin: toRem(5);
+        padding: toRem(5) toRem(15);
+    }
+}
+.dz2 {
+    opacity: 0;
+    transition: opacity 5s;
+}
+.dz3 {
+
+}
+.dz4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item-timer {
+    width: toRem(100);
+    height: toRem(100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: toRem(15);
+    font-size: toRem(34);
+    background-color: #0e005e;
+    border-radius: 50%;
+}
+.loaded {
+    opacity: 1;
+}
+.active {
+    background-color: #fffb00;
+    color: #2e2e2e;
+}
