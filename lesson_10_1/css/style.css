@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900&display=swap");
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+  font-family: "Proxima Nova", sans-serif;
+  /* &:has(.list:target) {
+      backdrop-filter: blur(5px);
+      background: rgba(27, 26, 26, 0.8);
+  } */
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+}
+.header__container {
+  max-width: 1320px;
+  padding-inline: 15px;
+  margin: 0 auto;
+}
+.menu {
+  padding-block: 26px;
+  position: relative;
+}
+.menu__button {
+  background-color: #ffbc57;
+  border-radius: 8px;
+  padding: 11px 20px;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1.26316;
+  color: #fff;
+}
+.menu__button::before {
+  content: "";
+  background: url(../img/icon_button_catalog.svg) center/20px auto no-repeat;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.menu:has(.list:target) .menu__button {
+  background-color: #008362;
+}
+.menu:has(.list:target) .menu__button::before {
+  background: url(../img/icon_button_crose.svg) center/20px auto no-repeat;
+}
+.list {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  background-color: #fff;
+  padding: 8px 0px;
+  border-radius: 8px;
+}
+.list:has(.list__item:hover) {
+  border-radius: 8px 0 0 8px;
+}
+.list:target {
+  visibility: visible;
+  display: block;
+}
+.list__item:hover .list__sub-links {
+  visibility: visible;
+}
+.list__item:hover::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 100%;
+  background-color: #ffbc57;
+  width: 5px;
+  height: calc(100% - 16px);
+}
+.list__link {
+  min-width: 300px;
+  white-space: nowrap;
+  padding-right: 39px;
+}
+.list__link::after {
+  content: "";
+  background: url(../img/arrow_yellow.svg) right center/100% no-repeat;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+.list__link:hover {
+  background-color: #ffbc57;
+}
+.list__link:hover::after {
+  background: url(../img/arrow_black.svg) right center/100% no-repeat;
+}
+.list__row {
+  width: 100%;
+  padding: 10px 15px 10px 35px;
+  display: inline-block;
+  min-height: 60px;
+}
+.list__row img {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+.list__sub-links {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  padding: 20px 20px 20px 30px;
+  white-space: nowrap;
+  visibility: hidden;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 0px 8px 8px 0px;
+}
+.list__sub-link {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 2.10526;
+  color: #2b2929;
+}
+.list__sub-link:hover {
+  text-decoration: underline;
+}
+
+.page {
+  background-color: #f8f8f8;
+  padding: 50px 0px;
+}
+.page__container {
+  max-width: 1320px;
+  padding-inline: 15px;
+  margin: 0 auto;
+}
+.card {
+  position: relative;
+  background-color: #fff;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  min-height: 300px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  overflow: clip;
+}
+.card:hover {
+  -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.card::before {
+  content: "";
+  background-color: #f8f8f8;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -90px;
+  left: -15px;
+}
+.card__name {
+  overflow: clip;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-width: 145px;
+  max-height: 60px;
+  color: #2b2929;
+}
+.card__number {
+  overflow: clip;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 55px;
+  max-height: 33px;
+  text-align: right;
+  color: #b1b1b1;
+}
+.card__image {
+  position: relative;
+  z-index: 2;
+}
+.card__link {
+  position: absolute;
+  z-index: 3;
+  bottom: 20px;
+  right: 20px;
+}
+.card__link:hover {
+  scale: 1.2;
+}
